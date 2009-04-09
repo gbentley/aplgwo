@@ -1,0 +1,23 @@
+This extension integrates Google Website Optimizer with eZ publish Open Source Content Management System
+
+Installation Requirements: 
+
+- Unpack the extension to the /extension directory
+- Activate the extension in the Setup->Extensions area of the admin interface (or edit the site.ini file directly)
+- Edit your custom or default pagelayout.tpl like this:
+  Before the </head> tag, add the line:
+
+  {include uri="design:aplgwo_header.tpl"}
+
+  Just before the </body> tag, add the line: 
+
+
+  {include uri="design:aplgwo_footer.tpl"}
+
+
+Setting Up an Experiment
+
+- Edit the .ini file for aplgwo.ini. 
+- Enter the node_id of the base, variation(s) and goal result pages. 
+- Enter the GWO Account Id and the GWO Experiment Id
+
