@@ -1,6 +1,7 @@
 This extension integrates Google Website Optimizer with eZ publish Open Source Content Management System
 
-Installation Requirements: 
+****
+Installation Instructions:  
 
 - Unpack the extension to the /extension directory
 - Activate the extension in the Setup->Extensions area of the admin interface (or edit the site.ini file directly)
@@ -14,10 +15,23 @@ Installation Requirements:
 
   {include uri="design:aplgwo_footer.tpl"}
 
-
+****
 Setting Up an Experiment
 
 - Edit the .ini file for aplgwo.ini. 
 - Enter the node_id of the base, variation(s) and goal result pages. 
 - Enter the GWO Account Id and the GWO Experiment Id
 
+
+****
+Recent Changes
+
+
+
+****
+Todo
+
+- Add sitewide support for CSS tests (just before the closure of </head> tag>
+- Add support for Multivariate testing in eZ Flow
+- Include support for content-object declaration of scripts
+- Test with Google Analytics
