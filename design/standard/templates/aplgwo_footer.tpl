@@ -1,11 +1,11 @@
-<!-- aplGwoHeader -->
+<!-- aplGwoFooter -->
 
 {def $GWOTrackerNumber = ezini('ExperimentSettings','GWOTrackerNumber','aplgwo.ini') 
      $GWOExperimentNumber = ezini('ExperimentSettings','GWOExperimentNumber','aplgwo.ini') 
      $OriginalNodeID = ezini('ExperimentSettings','OriginalNodeID','aplgwo.ini') 
      $ConversionNodeID = ezini('ExperimentSettings','ConversionNodeID','aplgwo.ini') 
      $VariationNodeIDArray = ezini('ExperimentSettings','VariationNodeID','aplgwo.ini') 
-     
+     $SitewideTest = ezini('ExperimentSettings','SitewideTest','aplgwo.ini') 
      $CurrentNodeID = $module_result.node_id
 }
 
@@ -38,9 +38,9 @@ pageTracker._trackPageview("/{/literal}{$GWOExperimentNumber}{literal}/test");
 }catch(err){}</script>
 {/literal}
 
-{elseif $VariationNodeIDArray|contains($CurrentNodeID) }
+{elseif or($VariationNodeIDArray|contains($CurrentNodeID),eq($SitewideTest,'true')) }
 
-<!--  Variation GWO Footer Code -->
+<!--  Variation Test Page GWO Footer Code -->
 
 {literal}<script type="text/javascript">
 if(typeof(_gat)!='object')document.write('<sc'+'ript src="http'+
@@ -54,4 +54,4 @@ pageTracker._trackPageview("/{/literal}{$GWOExperimentNumber}{literal}/test");
 {/literal}
 {/if}
 
-<!-- aplGwoHeader : End -->
+<!-- aplGwoFooter : End -->
