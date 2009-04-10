@@ -33,7 +33,9 @@ d.write('<sc'+'ript src="'+
 
 {/if}
 
-{if eq($SitewideTest,true)}
+<!-- GWO Custom Styles -->
+{if eq($SitewideTest,'true')}
+
 {include uri='design:aplgwo_custom_styles.tpl'}
 {/if}
 
