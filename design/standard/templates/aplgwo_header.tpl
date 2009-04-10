@@ -4,7 +4,8 @@
      $GWOExperimentNumber = ezini('ExperimentSettings','GWOExperimentNumber','aplgwo.ini') 
      $OriginalNodeID = ezini('ExperimentSettings','OriginalNodeID','aplgwo.ini') 
      $ConversionNodeID = ezini('ExperimentSettings','ConversionNodeID','aplgwo.ini') 
-     $VariationNodeIDArray = ezini('ExperimentSettings','VariationNodeID','aplgwo.ini') 
+     $VariationNodeIDArray = ezini('ExperimentSettings','VariationNodeID','aplgwo.ini')
+     $SitewideTest = ezini('ExperimentSettings','SitewideTest','aplgwo.ini') 
      
      $CurrentNodeID = $module_result.node_id
 }
@@ -30,6 +31,10 @@ d.write('<sc'+'ript src="'+
 {/literal}
 
 
+{/if}
+
+{if eq($SitewideTest,true)}
+{include uri='design:aplgwo_custom_styles.tpl'}
 {/if}
 
 <!-- aplGwoHeader : End -->
