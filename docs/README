@@ -23,17 +23,7 @@ Setting Up an Experiment
 - Enter the GWO Account Id and the GWO Experiment Id
 
 ***
-Subversion commands for Google Code
 
-Checkout: 
-svn checkout https://aplgwo.googlecode.com/svn/t
-runk/ aplgwo
-
-
-
-
-
-****
 Recent Changes
 
 
